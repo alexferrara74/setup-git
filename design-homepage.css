@@ -1,4 +1,6 @@
-#primapagina{width: 1024px;
+#primapagina{width:100%;
     height: 720px;
     border: 2px solid black;
+    background-image: url("sfondo.jpg");
+    background-repeat: none; text-align: center;
 }
