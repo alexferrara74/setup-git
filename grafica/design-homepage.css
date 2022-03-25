@@ -16,6 +16,8 @@
     border: 2px solid red;
 }
 #barra{
+    display: inline;
+    float: right;
     position: absolute;
     left: 30%;
     top: 5%;
@@ -24,4 +26,43 @@
     border: 2px solid red;
 
 }
-#navbar{}
+#navbar{
+    width: 100%;
+    border:3px solid green;
+    float: right;
+}
+
+#navbar li{
+    display: inline;
+  
+    margin-left: 25px;
+    float: left;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #primapagina{height: 600px;}
+    #navbar{display: none;}
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    #primapagina{height: 650px;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    #primapagina{height: 720px;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    #primapagina{height: 720px;}
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1900px) {
+    #primapagina{height: 950px;}
+  }
+
+  
