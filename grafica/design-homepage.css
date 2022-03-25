@@ -29,38 +29,60 @@
     display: inline;
     float: right;
     position: absolute;
-    left: 30%;
+    right: 2%;
     top: 5%;
     width: 60%;
-    height: 40px;
-    border: 2px solid red;
+    height: 50px;
+   
 
 }
 #navbar{
     width: 100%;
+    height: 50px;
+    margin: 0%;
+    padding: 0%;
     border:3px solid green;
-    float: right;
 }
 
 #navbar li{
-    display: inline;
-  
-    margin-left: 25px;
+    display:inline;
     float: left;
+    width: 22%;
+    height: 30px;
+    padding: 0%;
+    border: 2px solid green;
 }
 
 #logo{
     display: inline;
     float: left;
-    width: 60px;
-    height: 60px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 100px;
+    height: 100px;
     border: 2px solid red;
 }
 #logo img{
     width: 100%;
     height: 100%;
 }
-
+.pulsante{
+  text-align: center;
+  font-size: 22px;
+  margin-left: 2%;
+  margin-top: 10px;
+}
+.pulsante a{
+  text-decoration: none;
+  color: black;
+}
+.pulsante a:after{
+  
+}
+.pulsante:hover{
+  background-color: aqua;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -70,12 +92,12 @@
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    #primapagina{height: 650px;}
+    #primapagina{height: 690px;}
   }
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    #primapagina{height: 720px;}
+    #primapagina{height: 740px;}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
