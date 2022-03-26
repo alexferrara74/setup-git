@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="grafica/design-homepage.css">
     <title>Document</title>
 </head>
 <body>
     <div id="primapagina">
         <img id="imgsfondo" src="img/sfondo.jpg" alt="">
-        <div></div>
-        <div id="logo">
+        
+        <div id="logo" data-aos="fade-right">
             <img src="img/sfondo.jpg" alt="">
         </div>
+
         <div id="barra">
                 <ul id="navbar"> 
                         <li class="pulsante"><a href="http://">Home</a> </li>
@@ -24,12 +27,34 @@
                         <li class="pulsante">Home</li>
                 </ul>
         </div>
+
         <div id="slogan-centrale">
             <h1 id="slogan">DESY HOMEDECOR</h1>
-
         </div>
 
     </div>
 
+    <div id="seconda-pagina" 
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
+
+            <div class="icona">
+                <img src="img/sfondo.jpg" alt=""    >
+            </div>
+            <div class="icona">
+                <img src="img/sfondo.jpg" alt=""    >
+            </div>
+            
+
+    </div>
+    <script>
+        AOS . init ();
+      </script>
 </body>
 </html>
