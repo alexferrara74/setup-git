@@ -9,42 +9,38 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="grafica/design-homepage.css">
-    <title>Document</title>
+    
 </head>
 <body>
     <div id="primapagina">
         <img id="imgsfondo" src="img/sfondo.jpg" alt="">
         
-        <div id="logo" data-aos="fade-right">
+        <div id="logo" data-aos="zoom-in"  data-aos-offset="200"  data-aos-delay="50"data-aos-duration="1000"data-aos-easing="ease-in-out"data-aos-mirror="true"data-aos-once="false" data-aos-anchor-placement="top-bottom">
             <img src="img/sfondo.jpg" alt="">
         </div>
 
         <div id="barra">
                 <ul id="navbar"> 
-                        <li class="pulsante"><a href="http://">Home</a> </li>
+                      <li class="pulsante"><button onclick="scroll()"> Home</button> </li>
                         <li class="pulsante">Home</li>
                         <li class="pulsante">Home</li>
                         <li class="pulsante">Home</li>
                 </ul>
         </div>
-
-        <div id="slogan-centrale">
-            <h1 id="slogan">DESY HOMEDECOR</h1>
+        <button onclick="scroll()"> Home</button>
+        <div id="slogan-centrale" 
+        data-aos="fade-up"
+         >
+           <h1 id="slogan">DESY HOMEDECOR</h1>
         </div>
 
     </div>
 
-    <div id="seconda-pagina" 
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-bottom">
+    <div id="seconda-pagina">
 
-            <div class="icona">
+            <div class="icona"
+            data-aos="fade-up"
+            data-aos-duration =" 4000 ">
                 <img src="img/sfondo.jpg" alt=""    >
             </div>
             <div class="icona">
@@ -53,8 +49,10 @@
             
 
     </div>
+   
     <script>
         AOS . init ();
       </script>
 </body>
+<script src="js/homepage.js"></script>
 </html>
