@@ -15,10 +15,10 @@
 
 #slogan-centrale{
    position: absolute;
-   left: 20%;
+   left: 25%;
    top: 40%;
     margin: 0px ;
-    width: 60%;
+    width: 50%;
     border: 2px solid red;
 }
 #slogan-centrale h1{
@@ -30,9 +30,9 @@
     float: right;
     position: absolute;
     right: 2%;
-    top: 5%;
-    width: 60%;
-    height: 50px;
+    top: 2%;
+    width: 50%;
+    height: 40px;
    
 
 }
@@ -58,7 +58,7 @@
     float: left;
     position: absolute;
     left: 5%;
-    top: 5%;
+    top: 2%;
     width: 100px;
     height: 100px;
     border: 2px solid red;
@@ -77,12 +77,33 @@
   text-decoration: none;
   color: black;
 }
-.pulsante a:after{
-  
-}
+
 .pulsante:hover{
   background-color: aqua;
 }
+
+#seconda-pagina{
+    width: 100%;
+    height: 600px;
+    border: 2px solid green;
+}
+
+.icona{
+display: inline;
+float: left;
+width: 40%;
+height: 150px;
+}
+
+.icona img{width: 100%; height: 100%;}
+
+
+
+
+
+
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -102,7 +123,10 @@
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    #primapagina{height: 720px;}
+    #primapagina{height: 540px;}
+    #logo{width: 70px;
+    height: 70px;
+        }
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
