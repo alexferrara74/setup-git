@@ -1,3 +1,10 @@
-function scroll(){
-    window.scrollTo(200, 200);
-}
+import React from "react";
+import './card';
+import '../grafica/design-homepage.css';
+
+ReactDOM.render(
+
+    
+
+
+)
