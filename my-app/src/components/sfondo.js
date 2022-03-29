@@ -7,7 +7,7 @@ class Sfondo extends Component{
         return(
 
             <img id="imgsfondo" src={this.props.valore} alt=""/>
-
+            
         );
 
     }
