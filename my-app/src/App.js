@@ -13,14 +13,18 @@ class App extends Component {
    
 
     aggiungi=()=>{
+     
       const cards=[{id:0, testo:"bracciale" , foto:sfondo},
       {id:1, testo:"bracciale" , foto:sfondo},
       {id:2, testo:"bracciale" , foto:sfondo},
       {id:3, testo:"bracciale" , foto:sfondo}]
       this.setState({cards});
-      
+     
     }
    
+    remove=()=>{
+      const cards=[];
+      this.setState({cards});    }
 
 
   render(){
@@ -28,10 +32,12 @@ class App extends Component {
     <>
     
       <Navbar 
-      agg={this.aggiungi}/>
+      agg={this.aggiungi}
+      remove={this.remove}/>
       <Sfondo valore={sfondo} />
   
     <div id='card-container'>
+      
       {this.state.cards.map(card=> (
         <Card 
         key={card.id}

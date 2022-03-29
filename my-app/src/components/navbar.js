@@ -5,13 +5,13 @@ import Card from './card';
 class Navbar extends Component{
     render(){
     return(
-        <div id="barra">
+        <div className='animate__animated animate__bounce animate__delay-2s' id="barra">
                 <div id="logo">
                         <img id='imglogo' src={valore} alt=""/>
                 </div>
                 <ul id="navbar"> 
                 
-                    <li class="pulsante" onClick={()=>this.props.agg()} >Home</li>
+                    <li class="pulsante" onDoubleClick={()=>this.props.remove()} onClick={()=>this.props.agg()} >Home</li>
                     <li class="pulsante" >Prodotti</li>
                     <li class="pulsante">Tutorial</li>
                     <li class="pulsante">Chi Sono</li>
