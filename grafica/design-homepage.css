@@ -110,22 +110,30 @@ height: 150px;
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #primapagina{height: 600px;}
+    #secondapagina{height: 600px;}
+    #terzapagina{height: 600px;}
     #navbar{display: none;}
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     #primapagina{height: 690px;}
+    #secondapagina{height: 690px;}
+    #terzapagina{height: 690px;}
   }
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     #primapagina{height: 740px;}
+    #secondapagina{height: 740px;}
+    #terzapagina{height: 740px;}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     #primapagina{height: 710px;}
+    #secondapagina{height: 710px;}
+    #terzapagina{height: 710px;}
     #logo{width: 70px;
     height: 70px;
         }
@@ -134,6 +142,8 @@ height: 150px;
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1900px) {
     #primapagina{height: 950px;}
+    #secondapagina{height: 950px;}
+    #terzapagina{height: 950px;}
   }
 
   
