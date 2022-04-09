@@ -11,8 +11,7 @@ class Navbar extends Component{
                 <div id="logo">
                         <img id='imglogo' src={valore} alt=""/>
                 </div>
-                <ul id="navbar"> 
-                
+                <ul id="navbar">          
                     <li class="pulsante" onClick={()=>this.props.scrolla1()}>Home</li>
                     <li class="pulsante" onClick={()=>this.props.scrolla2()}>Prodotti</li>
                     <li class="pulsante" onClick={()=>this.props.scrolla3()}>Tutorial</li>

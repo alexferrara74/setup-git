@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import '../css/card.css'
+import '../css/card.css';
+
 
 class Card extends Component{
+    
 render(){
+ 
     return(
-        <div id="card" >
+        <div id={this.props.classe} data-aos={this.props.aos} 
+        data-aos-duration={this.props.duration} >
             <div id="fotocard">
                 <img src={this.props.foto} alt="fotocard"/>
             </div>

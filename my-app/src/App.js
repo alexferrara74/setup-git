@@ -5,7 +5,7 @@ import Navbar from './components/navbar';
 import Sfondo from './components/sfondo';
 import sfondo from './img/sfondo.jpg'
 import Card from './components/card';
-
+import "aos/dist/aos.css"
 
 
 class App extends Component {
@@ -21,20 +21,11 @@ class App extends Component {
   pagina3=()=>this.terzapagina.current.scrollIntoView({behavior:"smooth"});
   pagina4=()=>this.quartapagina.current.scrollIntoView({behavior:"smooth"});
 
-  state= {cards:[]}
-    aggiungi=()=>{
-     
-      const cards=[{id:0, testo:"bracciale" , foto:sfondo},
-      {id:1, testo:"bracciale" , foto:sfondo},
-      {id:2, testo:"bracciale" , foto:sfondo},
-      {id:3, testo:"bracciale" , foto:sfondo}]
-      this.setState({cards});
-     
-    }
-   
-    remove=()=>{
-      const cards=[];
-      this.setState({cards});    }
+  prodotti=[{id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"3000"},
+                {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
+                {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti1",aos:"fade-up",duration:"3000"},
+                {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti2",aos:"fade-up",duration:"3000"}
+                ];
 
     
 
@@ -50,21 +41,26 @@ class App extends Component {
       remove={this.remove}/>
       <Sfondo valore={sfondo} />
     
-    <div id='card-container'>
-      {this.state.cards.map(card=> (
+
+        <div id='secondapagina' data-aos="" ref={this.secondapagina}>
+        <div id='card-container'>
+      {this.prodotti.map(prodotti=> (
         <Card 
-        key={card.id}
-        testo={card.testo}
-        foto={card.foto}
+        classe={prodotti.classe}
+        aos={prodotti.aos}
+        duration={prodotti.duration}
+        key={prodotti.id}
+        testo={prodotti.testo}
+        foto={prodotti.foto}
         />
       ))}
     </div>
-        <div id='secondapagina' ref={this.secondapagina}>
         <Navbar
         scrolla1={this.pagina1}
         scrolla3={this.pagina3}
         scrolla4={this.pagina4}/>
         <Sfondo valore={sfondo} />
+        
         </div>
         <div id='terzapagina' ref={this.terzapagina}>
         <Navbar
