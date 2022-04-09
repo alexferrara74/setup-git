@@ -17,9 +17,8 @@ html::-webkit-scrollbar {
 #secondapagina #barra{
   display: inline;
     float: right;
-    position: absolute;
+    position: relative;
     right: 2%;
-    top: 100%;
     width: 100%;
     height: 40px;
     z-index: 2;
@@ -27,9 +26,8 @@ html::-webkit-scrollbar {
 #terzapagina #barra{
   display: inline;
     float: right;
-    position: absolute;
+    position: relative;
     right: 2%;
-    top: 216%;
     width: 100%;
     height: 40px;
     z-index: 2;
@@ -37,9 +35,8 @@ html::-webkit-scrollbar {
 #quartapagina #barra{
   display: inline;
     float: right;
-    position: absolute;
+    position: relative;
     right: 2%;
-    top: 333%;
     width: 100%;
     height: 40px;
     z-index: 2;
@@ -165,11 +162,17 @@ position: absolute;
   @media only screen and (min-width: 768px) {
 
     #homepage{height: 740px;}
+    #secondapagina{height: 740px;}
+    #terzapagina{height: 740px;}
+    #quartapagina{height: 740px;}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    #homepage{height: 690px;}
+    #homepage{height: 992px;}
+    #secondapagina{height: 992px;}
+    #terzapagina{height: 992px;}
+    #quartapagina{height: 992px;}
     #logo{width: 70px;
     height: 70px;
         }
@@ -178,6 +181,9 @@ position: absolute;
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1900px) {
     #homepage{height: 940px;}
+    #secondapagina{height: 940px;}
+    #terzapagina{height: 940px;}
+    #quartapagina{height: 940px;}
   }
 
   

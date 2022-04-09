@@ -44,22 +44,22 @@ class App extends Component {
 
 
       }
-      
-
-
-
+   
   render(){
   return (
     <>   
 
-      <Navbar 
-      scrolla2={this.pagina2}
-      scrolla3={this.pagina3}
-      scrolla4={this.pagina4}
-      agg={this.aggiungi}
-      remove={this.remove}/>
-      <Sfondo valore={sfondo} />
     
+    
+      <div id='homepage' ref={this.homepage}>
+        <Navbar
+        scrolla2={this.pagina2}
+        scrolla3={this.pagina3}
+        scrolla4={this.pagina4}
+        agg={this.aggiungi}
+        remove={this.remove}/>
+        <Sfondo valore={sfondo} />
+        </div>
 
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
         <div id='card-container'>
@@ -74,25 +74,6 @@ class App extends Component {
         />
       ))}
     </div>
-    <div id='homepage' ref={this.homepage}>
-        <Navbar
-        scrolla2={this.pagina2}
-        scrolla3={this.pagina3}
-        scrolla4={this.pagina4}
-        agg={this.aggiungi}
-        remove={this.remove}/>
-        <Sfondo valore={sfondo} />
-        </div>
-      <div id='secondapagina' ref={this.secondapagina}>
-          <div id='card-container'>
-            {this.state.cards.map(card=> (
-             <Card 
-               key={card.id}
-               testo={card.testo}
-               foto={card.foto}
-            />
-           ))}
-          </div>
 
         <Navbar
         scrolla1={this.pagina1}
@@ -102,7 +83,7 @@ class App extends Component {
         
         </div>
 
-      </div>
+      
 
         <div id='terzapagina' ref={this.terzapagina}>
         <Navbar
