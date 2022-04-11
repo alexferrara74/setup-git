@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../css/grafica.css'
-import valore from '../img/free.png'
+import valore from '../img/logo_desy2.png'
 
 class Navbar extends Component{
         
