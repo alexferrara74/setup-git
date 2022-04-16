@@ -28,7 +28,6 @@ class App extends Component {
                 {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti2",aos:"fade-up",duration:"3000"},
                 {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti3",aos:"fade-up",duration:"3000"}
                 ];
-<<<<<<< HEAD
 
   state= {cards:[]}
     aggiungi=()=>{
@@ -48,8 +47,7 @@ class App extends Component {
 
       }
       
-=======
->>>>>>> 6d6f1201612e678d3e540b0074cf1085859a2c8d
+
   render(){
   return (
     <>   
