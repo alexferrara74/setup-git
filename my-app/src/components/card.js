@@ -1,25 +1,28 @@
-import React, { Component } from "react";
+import React, { useState,useEffect } from "react";
 import '../css/card.css';
 
 
-class Card extends Component{
-    
-render(){
- 
+function Card(props){
+
+    const [classe,setClasse]= useState(props.classe);
+    const [aos,setAos]= useState(props.aos);
+    const [duration,setDuration]= useState(props.duration);
+    const [foto,setFoto]= useState(props.foto);
+    const [testo,setTesto]= useState(props.testo);
+
+
     return(
-        <div id={this.props.classe} data-aos={this.props.aos} 
-        data-aos-duration={this.props.duration} >
+        <div id={classe} data-aos={aos} 
+        data-aos-duration={duration} onClick={this.props.funzione} >
             <div id="fotocard">
-                <img src={this.props.foto} alt="fotocard"/>
+                <img src={foto} alt="fotocard"/>
             </div>
                 <div id="testo-card">
-                    <h1>{this.props.testo}</h1>
+                    <h1>{testo}</h1>
                 </div>
 
         </div>
 
     );
-}
-
 }
 export default Card;

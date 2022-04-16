@@ -3,11 +3,13 @@ import React, { Component, useRef } from 'react';
 import './css/grafica.css'
 import Navbar from './components/navbar';
 import Sfondo from './components/sfondo';
+import Container from './components/card-container';
 import sfondo from './img/sfondo.jpg'
 import sfondo2 from './img/pagina2.jpeg'
 import sfondo3 from './img/pagina3.jpeg'
 import Card from './components/card';
 import "aos/dist/aos.css"
+
 
 
 class App extends Component {
@@ -23,34 +25,29 @@ class App extends Component {
   pagina3=()=>this.terzapagina.current.scrollIntoView({behavior:"smooth"});
   pagina4=()=>this.quartapagina.current.scrollIntoView({behavior:"smooth"});
 
-  prodotti=[{id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"000"},
-                {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti1",aos:"fade-up",duration:"3000"},
-                {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti2",aos:"fade-up",duration:"3000"},
-                {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti3",aos:"fade-up",duration:"3000"}
-                ];
+  prodotti =[
+    {id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:4, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:5, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:6, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"}
+  ];
+  categorie =[
+    {id:0, testo:"Decorazioni" , foto:sfondo,  classe:"categoria",aos:"fade-up",duration:"3000"},
+    {id:1, testo:"Accessori" , foto:sfondo , classe:"categoria",aos:"fade-up",duration:"3000"},
+    {id:2, testo:"Tabelle" , foto:sfondo, classe:"categoria",aos:"fade-up",duration:"3000"}
+  ];
 
-  state= {cards:[]}
-    aggiungi=()=>{
-      const cards=[{id:0, testo:"bracciale" , foto:sfondo},
-      {id:1, testo:"bracciale" , foto:sfondo},
-      {id:2, testo:"bracciale" , foto:sfondo},
-      {id:3, testo:"bracciale" , foto:sfondo}]
-      this.setState({cards});
-     
+    sceltacontainer(){
+         alert('ciao');
     }
-   
-    remove=()=>{
-      const cards=[];
-      this.setState({cards});    }
-      listaprodotti=()=>{
 
-
-      }
-      
 
   render(){
   return (
-    <>   
+    <>  
 
       <div id='homepage' ref={this.homepage}>
         <Navbar
@@ -64,18 +61,9 @@ class App extends Component {
         </div>
 
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
-        <div id='card-container'>
-      {this.prodotti.map(prodotti=> (
-        <Card 
-        classe={prodotti.classe}
-        aos={prodotti.aos}
-        duration={prodotti.duration}
-        key={prodotti.id}
-        testo={prodotti.testo}
-        foto={prodotti.foto}
-        />
-      ))}
-    </div>
+          <Container
+           prodotto={this.categorie}
+           funzione={this.sceltacontainer}/>
         <Sfondo valore={sfondo2} />
         </div>
 
