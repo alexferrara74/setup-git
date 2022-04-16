@@ -1,6 +1,8 @@
 #prodotti{display: inline;position: absolute;float: left; width: 20%; height:150px; border: 3px solid blue;z-index: 100; margin-top: 5%;}
 #prodotti1{display: inline;position: absolute;float:center; width: 20%; margin-left:20%;height:150px; border: 3px solid blue;z-index: 100; margin-top: 5%;}
 #prodotti2{display: inline;position: absolute;float: right; width: 20%; height:150px;margin-left:40%; border: 3px solid blue;z-index: 100; margin-top: 5%;}
+#prodotti3{display: inline;position: absolute;float: right; width: 20%; height:150px;margin-left:40%; border: 3px solid blue;z-index: 100; margin-top: 5%;}
+#prodotti4{display: inline;position: absolute;float: right; width: 20%; height:150px;margin-left:40%; border: 3px solid blue;z-index: 100; margin-top: 5%;}
 
 
 

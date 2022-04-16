@@ -4,6 +4,8 @@ import './css/grafica.css'
 import Navbar from './components/navbar';
 import Sfondo from './components/sfondo';
 import sfondo from './img/sfondo.jpg'
+import sfondo2 from './img/pagina2.jpeg'
+import sfondo3 from './img/pagina3.jpeg'
 import Card from './components/card';
 import "aos/dist/aos.css"
 
@@ -21,11 +23,12 @@ class App extends Component {
   pagina3=()=>this.terzapagina.current.scrollIntoView({behavior:"smooth"});
   pagina4=()=>this.quartapagina.current.scrollIntoView({behavior:"smooth"});
 
-  prodotti=[{id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"3000"},
-                {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
-                {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti1",aos:"fade-up",duration:"3000"},
-                {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti2",aos:"fade-up",duration:"3000"}
+  prodotti=[{id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"000"},
+                {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti1",aos:"fade-up",duration:"3000"},
+                {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti2",aos:"fade-up",duration:"3000"},
+                {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti3",aos:"fade-up",duration:"3000"}
                 ];
+<<<<<<< HEAD
 
   state= {cards:[]}
     aggiungi=()=>{
@@ -45,18 +48,22 @@ class App extends Component {
 
       }
       
+=======
+>>>>>>> 6d6f1201612e678d3e540b0074cf1085859a2c8d
   render(){
   return (
     <>   
 
-      <Navbar 
-      scrolla2={this.pagina2}
-      scrolla3={this.pagina3}
-      scrolla4={this.pagina4}
-      agg={this.aggiungi}
-      remove={this.remove}/>
-      <Sfondo valore={sfondo} />
-    
+      <div id='homepage' ref={this.homepage}>
+        <Navbar
+        scrolla1={this.pagina1}
+        scrolla2={this.pagina2}
+        scrolla3={this.pagina3}
+        scrolla4={this.pagina4}
+        
+        />
+        <Sfondo valore={sfondo} />
+        </div>
 
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
         <div id='card-container'>
@@ -71,49 +78,16 @@ class App extends Component {
         />
       ))}
     </div>
-    <div id='homepage' ref={this.homepage}>
-        <Navbar
-        scrolla2={this.pagina2}
-        scrolla3={this.pagina3}
-        scrolla4={this.pagina4}
-        agg={this.aggiungi}
-        remove={this.remove}/>
-        <Sfondo valore={sfondo} />
-        </div>
-      <div id='secondapagina' ref={this.secondapagina}>
-          <div id='card-container'>
-            {this.state.cards.map(card=> (
-             <Card 
-               key={card.id}
-               testo={card.testo}
-               foto={card.foto}
-            />
-           ))}
-          </div>
-
-        <Navbar
-        scrolla1={this.pagina1}
-        scrolla3={this.pagina3}
-        scrolla4={this.pagina4}/>
-        <Sfondo valore={sfondo} />
-        
+        <Sfondo valore={sfondo2} />
         </div>
 
-      </div>
+      
 
         <div id='terzapagina' ref={this.terzapagina}>
-        <Navbar
-        scrolla1={this.pagina1}
-        scrolla2={this.pagina2}
-        scrolla4={this.pagina4} />
-        <Sfondo valore={sfondo} />
+        <Sfondo valore={sfondo3} />
         </div>
 
-        <div id='quartapagina' ref={this.quartapagina}>
-        <Navbar
-        scrolla1={this.pagina1}
-        scrolla2={this.pagina2}
-        scrolla3={this.pagina3}/>
+        <div id='quartapagina' ref={this.quartapagina}>      
         <Sfondo valore={sfondo} />
         </div>
 
