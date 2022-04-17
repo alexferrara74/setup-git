@@ -7,14 +7,14 @@ import sfondo3 from '../img/pagina3.jpeg'
 
 function Container(props){
 const prodotti=props.prodotto;
-const funzione=props.funzione;
 
 
 return(
     <div id='card-container'>
     {prodotti.map(prodotti=> (
       <Card
-        funzione={props.funzione}
+      funzione={props.funzione}
+       categoria={props.categoria}
         classe={prodotti.classe}
         aos={prodotti.aos}
         duration={prodotti.duration}

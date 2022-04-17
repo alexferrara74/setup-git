@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import '../css/grafica.css'
 import valore from '../img/logo_desy2.png'
 
-class Navbar extends Component{
+export default function Navbar(props){
         
-    render(){
+   
     return(
             
         <div id="barra">
@@ -12,13 +12,13 @@ class Navbar extends Component{
                         <img id='imglogo' src={valore} alt=""/>
                 </div>
                 <ul id="navbar">          
-                    <li class="pulsante" onClick={()=>this.props.scrolla1()}>Home</li>
-                    <li class="pulsante" onClick={()=>this.props.scrolla2()}>Prodotti</li>
-                    <li class="pulsante" onClick={()=>this.props.scrolla3()}>Tutorial</li>
-                    <li class="pulsante" onClick={()=>this.props.scrolla4()}>Chi Sono</li>
+                    <li class="pulsante" onClick={()=>props.scrolla1()}>Home</li>
+                    <li class="pulsante" onClick={()=>props.scrolla2()}>Prodotti</li>
+                    <li class="pulsante" onClick={()=>props.scrolla3()}>Tutorial</li>
+                    <li class="pulsante" onClick={()=>props.scrolla4()}>Chi Sono</li>
                  </ul>
         </div>
         );
 }
-}
-export default Navbar; 
+
+ 

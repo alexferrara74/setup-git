@@ -25,24 +25,34 @@ class App extends Component {
   pagina3=()=>this.terzapagina.current.scrollIntoView({behavior:"smooth"});
   pagina4=()=>this.quartapagina.current.scrollIntoView({behavior:"smooth"});
 
+  risultato=[];
   prodotti =[
-    {id:0, testo:"bracciale" , foto:sfondo,  classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:1, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:2, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:3, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:4, testo:"bracciale" , foto:sfondo , classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:5, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:6, testo:"bracciale" , foto:sfondo, classe:"prodotti",aos:"fade-up",duration:"3000"}
-  ];
-  categorie =[
-    {id:0, testo:"Decorazioni" , foto:sfondo,  classe:"categoria",aos:"fade-up",duration:"3000"},
-    {id:1, testo:"Accessori" , foto:sfondo , classe:"categoria",aos:"fade-up",duration:"3000"},
-    {id:2, testo:"Tabelle" , foto:sfondo, classe:"categoria",aos:"fade-up",duration:"3000"}
+    {id:0, testo:"bracciale" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:1, testo:"bracciale" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:2, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:3, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:4, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:5, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:6, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"}
   ];
 
-    sceltacontainer(){
-         alert('ciao');
-    }
+  categorie =[
+    {id:0, testo:"Decorazioni" , categoria:"Decorazioni",foto:sfondo,  classe:"categoria",aos:"fade-up",duration:"3000"},
+    {id:1, testo:"Accessori" , foto:sfondo ,categoria:"Accessori", classe:"categoria",aos:"fade-up",duration:"3000"},
+    {id:2, testo:"Tabelle" , foto:sfondo,categoria:"Tabelle", classe:"categoria",aos:"fade-up",duration:"3000"}
+  ];
+
+    array=(valore)=>{
+      alert("ciao"+valore);
+        
+        
+          <Container
+          prodotto={this.prodotti} />
+        
+        document.getElementById('secondapagina') 
+        }
+
+    
 
 
   render(){
@@ -63,7 +73,8 @@ class App extends Component {
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
           <Container
            prodotto={this.categorie}
-           funzione={this.sceltacontainer}/>
+           funzione={this.array}
+           />
         <Sfondo valore={sfondo2} />
         </div>
 

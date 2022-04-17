@@ -9,11 +9,11 @@ function Card(props){
     const [duration,setDuration]= useState(props.duration);
     const [foto,setFoto]= useState(props.foto);
     const [testo,setTesto]= useState(props.testo);
-
+    const [categoria,setCategoria]=useState(props.categoria)
 
     return(
         <div id={classe} data-aos={aos} 
-        data-aos-duration={duration} onClick={this.props.funzione} >
+        data-aos-duration={duration} onClick={()=>props.funzione(props.categoria)}>
             <div id="fotocard">
                 <img src={foto} alt="fotocard"/>
             </div>
