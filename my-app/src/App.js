@@ -9,6 +9,7 @@ import sfondo2 from './img/pagina2.jpeg'
 import sfondo3 from './img/pagina3.jpeg'
 import Card from './components/card';
 import "aos/dist/aos.css"
+import ReactDOM from 'react-dom';
 
 
 
@@ -19,12 +20,14 @@ class App extends Component {
     this.terzapagina = React.createRef();
     this.quartapagina = React.createRef();
     this.homepage = React.createRef();
+  
+    
   }
   pagina1=()=>this.homepage.current.scrollIntoView({behavior:"smooth"});
   pagina2=()=>this.secondapagina.current.scrollIntoView({behavior:"smooth"});
   pagina3=()=>this.terzapagina.current.scrollIntoView({behavior:"smooth"});
   pagina4=()=>this.quartapagina.current.scrollIntoView({behavior:"smooth"});
-
+  
   risultato=[];
   prodotti =[
     {id:0, testo:"bracciale" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
@@ -42,17 +45,22 @@ class App extends Component {
     {id:2, testo:"Tabelle" , foto:sfondo,categoria:"Tabelle", classe:"categoria",aos:"fade-up",duration:"3000"}
   ];
 
-    array=(valore)=>{
-      alert("ciao"+valore);
-        
-        
-          <Container
-          prodotto={this.prodotti} />
-        
-        document.getElementById('secondapagina') 
-        }
-
+  scelta=(valore)=>{
     
+    if(valore==('categoria')){
+    return(
+      <Container prodotto={this.categorie} funzione={this.scelta}/>
+    )
+    }if(valore=="Accessori"||valore=="Tabelle"||valore=="Decorazioni"){
+
+   
+      return(
+        <Container prodotto={this.prodotti} funzione={this.scelta}/>
+      )
+    }
+    
+  }
+
 
 
   render(){
@@ -64,21 +72,17 @@ class App extends Component {
         scrolla1={this.pagina1}
         scrolla2={this.pagina2}
         scrolla3={this.pagina3}
-        scrolla4={this.pagina4}
-        
+        scrolla4={this.pagina4}        
         />
         <Sfondo valore={sfondo} />
         </div>
 
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
-          <Container
-           prodotto={this.categorie}
-           funzione={this.array}
-           />
+          {this.scelta("categoria")}
+          
+          
         <Sfondo valore={sfondo2} />
         </div>
-
-      
 
         <div id='terzapagina' ref={this.terzapagina}>
         <Sfondo valore={sfondo3} />

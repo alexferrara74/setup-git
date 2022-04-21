@@ -13,13 +13,13 @@ function Card(props){
 
     return(
         <div id={classe} data-aos={aos} 
-        data-aos-duration={duration} onClick={()=>props.funzione(props.categoria)}>
+            data-aos-duration={duration} onClick={()=>props.funzione(categoria)}>
             <div id="fotocard">
                 <img src={foto} alt="fotocard"/>
             </div>
-                <div id="testo-card">
-                    <h1>{testo}</h1>
-                </div>
+            <div id="testo-card">
+                <h1>{testo}</h1>
+            </div>
 
         </div>
 

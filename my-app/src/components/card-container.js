@@ -9,12 +9,13 @@ function Container(props){
 const prodotti=props.prodotto;
 
 
+
 return(
     <div id='card-container'>
     {prodotti.map(prodotti=> (
       <Card
       funzione={props.funzione}
-       categoria={props.categoria}
+       categoria={prodotti.categoria}
         classe={prodotti.classe}
         aos={prodotti.aos}
         duration={prodotti.duration}
