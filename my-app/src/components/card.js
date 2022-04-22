@@ -11,6 +11,7 @@ function Card(props){
     const [testo,setTesto]= useState(props.testo);
     const [categoria,setCategoria]=useState(props.categoria)
 
+
     return(
         <div id={classe} data-aos={aos} 
             data-aos-duration={duration} onClick={()=>props.funzione(categoria)}>

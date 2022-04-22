@@ -9,8 +9,9 @@ import sfondo2 from './img/pagina2.jpeg'
 import sfondo3 from './img/pagina3.jpeg'
 import Card from './components/card';
 import "aos/dist/aos.css"
-import ReactDOM from 'react-dom';
 
+import ReactDOM from 'react-dom';
+import Refresh from './components/refresh';
 
 
 class App extends Component {
@@ -30,13 +31,13 @@ class App extends Component {
   
   risultato=[];
   prodotti =[
-    {id:0, testo:"bracciale" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:1, testo:"bracciale" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:2, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:3, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:4, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:5, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"},
-    {id:6, testo:"bracciale" , foto:sfondo ,categoria:"Accessori ", classe:"prodotti",aos:"fade-up",duration:"3000"}
+    {id:0, testo:"bracciale1" , foto:sfondo ,categoria:"Decorazioni", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:1, testo:"bracciale2" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:2, testo:"bracciale" , foto:sfondo ,categoria:"Decorazioni", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:3, testo:"bracciale3" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:4, testo:"bracciale" , foto:sfondo ,categoria:"Decorazioni", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:5, testo:"bracciale4" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"},
+    {id:6, testo:"bracciale5" , foto:sfondo ,categoria:"Accessori", classe:"prodotti",aos:"fade-up",duration:"3000"}
   ];
 
   categorie =[
@@ -46,21 +47,23 @@ class App extends Component {
   ];
 
   scelta=(valore)=>{
-    
-    if(valore==('categoria')){
-    return(
-      <Container prodotto={this.categorie} funzione={this.scelta}/>
+    ReactDOM.render(
+      <React.StrictMode>
+        <Container prodotto={this.prodotti} datoinput={valore}/> 
+        <Refresh/>
+      </React.StrictMode>,
+      document.getElementById('card-container')
     )
-    }if(valore=="Accessori"||valore=="Tabelle"||valore=="Decorazioni"){
+          }
 
-   
-      return(
-        <Container prodotto={this.prodotti} funzione={this.scelta}/>
-      )
-    }
-    
-  }
-
+          ritorna=()=>{
+            ReactDOM.render(
+              <React.StrictMode>
+                <Container prodotto={this.categorie} />
+              </React.StrictMode>,
+              document.getElementById('card-container')
+            )
+          }
 
 
   render(){
@@ -78,9 +81,7 @@ class App extends Component {
         </div>
 
         <div id='secondapagina' data-aos="" ref={this.secondapagina}>
-          {this.scelta("categoria")}
-          
-          
+        <Container prodotto={this.categorie} funzione={this.scelta}/>
         <Sfondo valore={sfondo2} />
         </div>
 

@@ -6,12 +6,25 @@ import sfondo2 from '../img/pagina2.jpeg'
 import sfondo3 from '../img/pagina3.jpeg'
 
 function Container(props){
-const prodotti=props.prodotto;
+const prod=props.prodotto;
+const [dato,setDato]=useState(props.datoinput);
+const prodotti=[];
 
+function sceltacateg(valore){
+for (let index = 0; index < prod.length; index++) {
+    if(prod[index].categoria==valore||prod[index].classe=="categoria"){
+        prodotti.push(prod[index]);
+    }
+                          
+}
+
+
+}
 
 
 return(
     <div id='card-container'>
+        {sceltacateg(dato)}
     {prodotti.map(prodotti=> (
       <Card
       funzione={props.funzione}
