@@ -8,7 +8,7 @@ function Refresh() {
   
   return (
     <div id="buttonrefresh">
-      <button onClick={refreshPage}>Click to reload!</button>
+      <button onClick={refreshPage}><p>Categorie</p></button>
     </div>
   );
 }

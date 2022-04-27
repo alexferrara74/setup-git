@@ -14,19 +14,15 @@ function sceltacateg(valore){
 for (let index = 0; index < prod.length; index++) {
     if(prod[index].categoria==valore||prod[index].classe=="categoria"){
         prodotti.push(prod[index]);
-    }
-                          
-}
-
-
-}
-
+    }                         
+} }
 
 return(
     <div id='card-container'>
         {sceltacateg(dato)}
-    {prodotti.map(prodotti=> (
+         {prodotti.map(prodotti=> (
       <Card
+      descrizione={prodotti.descrizione}
       funzione={props.funzione}
        categoria={prodotti.categoria}
         classe={prodotti.classe}
